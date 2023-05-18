@@ -1,0 +1,99 @@
+@media(min-width:$tablet) and (max-width:$tablet2) {
+    body {
+        margin: 0 auto;
+        height: 100%;
+
+        main {
+            @include main-items;
+            max-width: 800px;
+            background-image: url(/images/bg-pattern-desktop.svg);
+            grid-template-columns: 1fr minmax(350px 490px);
+            margin-top: 50px;
+
+            #box {
+                @include box;
+                height: 100%;
+
+                .logo2 {
+                    display: block;
+                    text-align: left;
+                    padding-left: 50px;
+                }
+
+                p {
+                    width: 330px;
+                    line-height: 12pt;
+                    font-size: 15px;
+                    padding: 5px;
+                }
+
+                %fontsh1h {
+                    font-size: 2rem;
+                    font-family: $font-family;
+                    letter-spacing: 18px;
+                    padding-top: 12px;
+                    text-align: left;
+                    margin-left: 54px;
+                }
+
+                h1:nth-of-type(1) {
+                    @extend %fontsh1h;
+                    margin-top: 40px;
+                }
+
+                h1:nth-of-type(2) {
+                    @extend %fontsh1h;
+                }
+
+                h1:nth-of-type(3) {
+                    @extend %fontsh1h;
+                }
+            }
+
+            .main-box-one {
+                align-self: stretch;
+                grid-column: 2/3;
+                grid-row: 1/2;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .all-inputs {
+                input {
+                    margin-left: -10px;
+                }
+
+                %paragraph1 {
+                    position: relative;
+                    top: 30px;
+                    left: 80px;
+                    text-align: center;
+                    font-size: 15px;
+                    font-family: $font-family;
+                }
+
+                .p-1 {
+                    @extend %paragraph1;
+                    color: rgba(250, 95, 95, 0.865);
+                }
+
+                .p-2 {
+                    @extend %paragraph1;
+                    color: rgba(84, 247, 119, 0.865);
+                }
+            }
+        }
+
+        footer {
+            margin-top: 0px;
+            height: 10px;
+        }
+
+        .attribution {
+            margin: 0 auto;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400&display=swap');
+
+
+$primary-Desaturated-red: hsl(0, 36%, 70%);
+$primary-soft-red: hsl(0, 93%, 68%);
+$neutral-darkg-grayish-red: hsl(0, 6%, 24%);
+$gradient-two: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+$gradient-one: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 88%));
+$font-family: 'Josefin Sans', sans-serif;
+$color-white: white;
+$background: hsla(0, 100%, 92%, 0.337);
+$mobile: 450px;
+$tablet: 980px;
+$tablet2: 1250px;
+
+
+@mixin main-items {
+    margin: 0 auto;
+    display: grid;
+    box-shadow: 3px 3px 12px rgba(155, 138, 138, 0.755), 3px 3px 12px rgba(155, 138, 138, 0.777);
+
+    .logo {
+        display: none;
+    }
+}
+
+@mixin box {
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+    .main-box-two {
+        display: none;
+    }
+
+    p {
+        text-align: left;
+    }
+
+}
+
+@mixin attributes {
+    font-family: $font-family;
+    font-size: 11px;
+
+    a {
+        color: $primary-soft-red;
+    }
+}
+
+@mixin button {
+    position: relative;
+    z-index: 3;
+    bottom: -6px;
+    right: 70px;
+    border: none;
+    color: $color-white;
+    font-size: 28px;
+    font-weight: 100;
+    background-image: $gradient-two;
+    height: 52px;
+}

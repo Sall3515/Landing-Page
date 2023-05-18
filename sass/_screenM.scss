@@ -1,0 +1,125 @@
+@media(min-width:$mobile) and (max-width:$tablet) {
+    body {
+        min-height: 1250px;
+        margin: 0 auto;
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            background-color: none;
+
+            .logo {
+                display: none;
+            }
+
+            .main-box-one {
+                display: none;
+            }
+
+            #box {
+                margin: 0;
+
+                .main-box-two {
+                    display: block;
+                    align-self: stretch;
+
+                    img {
+                        height: 600px;
+                        width: 100%;
+                    }
+                }
+
+                .logo2 {
+                    padding: 25px;
+                    display: block;
+                    text-align: left;
+                    background-color: none;
+                }
+
+                %fonts {
+                    font-size: 3rem;
+                    font-family: $font-family;
+                    letter-spacing: 18px;
+                    padding-top: 12px;
+                    text-align: center;
+                }
+
+                h1:nth-of-type(1) {
+                    @extend %fonts;
+                    margin-top: 60px;
+
+                }
+
+                h1:nth-of-type(2) {
+                    @extend %fonts;
+                }
+
+                h1:nth-of-type(3) {
+                    @extend %fonts;
+                    margin-bottom: 40px;
+                }
+
+                p {
+                    max-width: 387px;
+                    line-height: 19pt;
+                    text-align: center;
+                    font-size: 1em;
+                }
+
+                .all-inputs {
+
+                    input {
+                        min-width: 180px;
+                        margin-top: -200px;
+                        min-height: 20px;
+                    }
+
+                    #btn {
+                        @include button;
+                        max-width: 70px;
+
+                    }
+
+                    %paragraphss {
+                        position: relative;
+                        left: 0px;
+                        margin-top: 30px;
+                        font-size: 15px;
+                        font-family: $font-family;
+                        text-align: center
+                    }
+
+                    // გასწორებელია
+
+                    .p-1 {
+                        @extend %paragraphss;
+                        color: rgba(250, 95, 95, 0.865);
+                    }
+
+                    .p-2 {
+                        @extend %paragraphss;
+                        color: rgba(84, 247, 119, 0.865);
+                    }
+                }
+            }
+
+        }
+    }
+
+    .attribution {
+        @include attributes;
+        padding-top: 10px;
+        margin: 0 auto;
+        max-width: 300px;
+        height: 30px;
+
+        a {
+            text-align: center;
+        }
+
+    }
+
+}
